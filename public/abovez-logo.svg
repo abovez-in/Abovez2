@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <filter id="subtle-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.12" flood-color="#0f172a" />
+    </filter>
+  </defs>
+
+  <!-- Outer White Circle with Filter -->
+  <circle cx="250" cy="250" r="236" fill="#ffffff" filter="url(#subtle-shadow)" />
+
+  <!-- Outer Royal Blue Border Ring -->
+  <circle cx="250" cy="250" r="226" fill="none" stroke="#2563eb" stroke-width="6.5" />
+
+  <!-- Inner Concentric Royal Blue Ring -->
+  <circle cx="250" cy="250" r="206" fill="none" stroke="#1d4ed8" stroke-width="4.5" />
+
+  <!-- Central Wordmark: Above -->
+  <g transform="translate(85, 230)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="78" font-weight="900" fill="#1e40af" letter-spacing="-1.5">Above</text>
+  </g>
+
+  <!-- 'Z' with upward-right Arrow (Iconic AboveZ Emblem) -->
+  <g transform="translate(328, 172)">
+    <!-- Main 'Z' Body -->
+    <path d="M 0 58 L 54 58 L 18 16 L 46 16 L 46 0 L 0 0 L 0 8 L 32 46 L 0 46 Z" fill="#1e40af" />
+    <!-- Upward-Right Growth Arrow on top of Z -->
+    <path d="M 36 28 L 68 -4 L 52 -6 L 76 -10 L 76 14 L 68 -2 L 36 28 Z" fill="#1d4ed8" />
+  </g>
+
+  <!-- Underline Bar -->
+  <rect x="85" y="246" width="330" height="5" rx="2.5" fill="#1d4ed8" />
+
+  <!-- Tagline: THE BEST CREW PLATFORM -->
+  <text x="250" y="272" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="800" fill="#1e40af" letter-spacing="4.5">THE BEST CREW PLATFORM</text>
+
+  <!-- Crew Silhouettes Lineup at the bottom of the badge -->
+  <g fill="#1e3a8a" transform="translate(0, 5)">
+    <!-- 1. MC / Anchor with microphone & wire -->
+    <!-- Head -->
+    <circle cx="160" cy="308" r="7" />
+    <!-- Hair / Beard profile -->
+    <path d="M 153 306 Q 160 300 167 306 Q 167 314 162 316 Q 155 315 153 306 Z" fill="#172554" />
+    <!-- Body / Shirt -->
+    <path d="M 152 318 C 150 324 148 335 149 346 L 171 346 C 172 335 170 324 168 318 C 165 316 155 316 152 318 Z" />
+    <!-- Arms holding mic -->
+    <path d="M 152 320 L 145 334 L 149 336 L 154 325 Z" />
+    <path d="M 168 320 L 174 328 L 171 332 L 166 324 Z" />
+    <!-- Mic in hand -->
+    <circle cx="174" cy="322" r="3" fill="#172554" />
+    <!-- Mic cord loop -->
+    <path d="M 174 325 Q 168 338 165 352 Q 160 370 144 380 Q 138 375 146 360" fill="none" stroke="#1e3a8a" stroke-width="1.8" />
+    <!-- Legs / Pants -->
+    <path d="M 150 346 L 148 395 L 157 395 L 159 360 L 162 360 L 164 395 L 172 395 L 170 346 Z" fill="#172554" />
+
+    <!-- 2. Lighting Crew adjusting stage light -->
+    <!-- Head with ponytail -->
+    <circle cx="205" cy="316" r="6.5" />
+    <path d="M 198 316 Q 200 310 207 312 Q 209 319 196 324" fill="#172554" />
+    <!-- Body -->
+    <path d="M 197 326 C 196 333 195 342 196 352 L 214 352 C 215 342 214 333 213 326 Z" />
+    <!-- Raised arms to light -->
+    <path d="M 210 326 L 222 320 L 224 324 L 213 332 Z" />
+    <path d="M 200 326 L 214 322 L 216 325 L 202 332 Z" />
+    <!-- Legs -->
+    <path d="M 196 352 L 194 395 L 202 395 L 205 365 L 207 365 L 210 395 L 218 395 L 214 352 Z" fill="#172554" />
+    <!-- Studio Light on Tripod -->
+    <ellipse cx="228" cy="314" rx="8" ry="11" fill="#172554" />
+    <circle cx="228" cy="314" r="5" fill="#60a5fa" />
+    <!-- Tripod stand -->
+    <line x1="228" y1="325" x2="228" y2="368" stroke="#172554" stroke-width="2.5" />
+    <line x1="228" y1="368" x2="216" y2="395" stroke="#172554" stroke-width="2" />
+    <line x1="228" y1="368" x2="240" y2="395" stroke="#172554" stroke-width="2" />
+
+    <!-- 3. Production Technician with toolbox / Pelican gear case -->
+    <!-- Head -->
+    <circle cx="258" cy="311" r="7" />
+    <!-- Body with lanyard ID badge -->
+    <path d="M 250 321 C 248 328 247 340 248 350 L 268 350 C 269 340 268 328 266 321 Z" />
+    <!-- ID lanyard -->
+    <path d="M 255 321 L 259 332 L 263 321" fill="none" stroke="#60a5fa" stroke-width="1.2" />
+    <rect x="257" y="332" width="4" height="6" fill="#ffffff" />
+    <!-- Arm holding case -->
+    <path d="M 250 323 L 246 348 L 250 349 L 254 327 Z" />
+    <!-- Pelican Case -->
+    <rect x="238" y="347" width="22" height="17" rx="2" fill="#172554" />
+    <rect x="245" y="344" width="8" height="3" rx="1" fill="#172554" />
+    <!-- Legs -->
+    <path d="M 248 350 L 246 395 L 255 395 L 258 362 L 260 362 L 263 395 L 272 395 L 268 350 Z" fill="#172554" />
+
+    <!-- 4. Stage Coordinator with clipboard -->
+    <!-- Head with headset -->
+    <circle cx="292" cy="314" r="6.5" />
+    <path d="M 288 310 A 5 5 0 0 1 296 310" fill="none" stroke="#172554" stroke-width="1.8" />
+    <circle cx="296" cy="314" r="2" fill="#172554" />
+    <!-- Body -->
+    <path d="M 284 324 C 283 331 283 342 284 350 L 302 350 C 303 342 303 331 302 324 Z" />
+    <!-- Arms holding clipboard -->
+    <path d="M 285 325 L 290 338 L 298 335 L 295 325 Z" />
+    <!-- Clipboard -->
+    <rect x="290" y="330" width="10" height="15" rx="1" transform="rotate(-15 295 337)" fill="#172554" />
+    <rect x="291" y="332" width="7" height="11" transform="rotate(-15 295 337)" fill="#ffffff" />
+    <!-- Legs -->
+    <path d="M 284 350 L 282 395 L 290 395 L 293 362 L 295 362 L 298 395 L 306 395 L 302 350 Z" fill="#172554" />
+
+    <!-- 5. Sound / AV Engineer at DJ / Console Desk -->
+    <!-- Head -->
+    <circle cx="328" cy="314" r="7" />
+    <!-- Body leaning slightly -->
+    <path d="M 320 324 C 319 332 319 342 320 350 L 338 350 C 339 342 338 332 336 324 Z" />
+    <!-- Arms to desk -->
+    <path d="M 334 326 L 340 338 L 343 338 L 337 325 Z" />
+    <!-- DJ Mixer / Sound Table -->
+    <rect x="334" y="339" width="22" height="6" rx="1" fill="#172554" />
+    <line x1="345" y1="345" x2="345" y2="395" stroke="#172554" stroke-width="2.5" />
+    <line x1="337" y1="395" x2="353" y2="395" stroke="#172554" stroke-width="2.5" />
+    <!-- Legs -->
+    <path d="M 320 350 L 318 395 L 326 395 L 329 362 L 331 362 L 333 395 L 341 395 L 338 350 Z" fill="#172554" />
+
+    <!-- 6. Stage Director pointing arm -->
+    <!-- Head -->
+    <circle cx="370" cy="314" r="6.5" />
+    <!-- Body -->
+    <path d="M 362 324 C 361 332 361 342 362 350 L 380 350 C 381 342 380 332 378 324 Z" />
+    <!-- Pointing Right Arm -->
+    <path d="M 376 325 L 396 322 L 396 326 L 378 332 Z" />
+    <!-- Left arm raised/directing -->
+    <path d="M 363 325 L 356 312 L 359 310 L 366 324 Z" />
+    <!-- Legs -->
+    <path d="M 362 350 L 360 395 L 368 395 L 371 362 L 373 362 L 376 395 L 384 395 L 380 350 Z" fill="#172554" />
+  </g>
+</svg>
