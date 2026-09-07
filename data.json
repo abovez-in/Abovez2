@@ -1,5 +1,5 @@
 {
-  "totalWebsiteClicks": 45,
+  "totalWebsiteClicks": 49,
   "users": [
     {
       "id": "admin-1",
@@ -312,6 +312,66 @@
   ],
   "adminLogs": [],
   "loginLogs": [
+    {
+      "id": "log-1788802737765-186",
+      "userId": "guest",
+      "userName": "Guest User",
+      "userEmail": "N/A",
+      "userPhone": "N/A",
+      "userRole": "guest",
+      "userCity": "Surat",
+      "action": "Website Visit / Page Click (/)",
+      "timestamp": "2026-09-07T17:38:57.765Z",
+      "date": "07 Sept 2026",
+      "time": "05:38:57 pm",
+      "ip": "2409:40c1:5401:d077:e449:9b1f:7800:42b1",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
+    },
+    {
+      "id": "log-1788802737704-116",
+      "userId": "guest",
+      "userName": "Guest User",
+      "userEmail": "N/A",
+      "userPhone": "N/A",
+      "userRole": "guest",
+      "userCity": "Surat",
+      "action": "Website Visit / Page Click (/)",
+      "timestamp": "2026-09-07T17:38:57.703Z",
+      "date": "07 Sept 2026",
+      "time": "05:38:57 pm",
+      "ip": "2409:40c1:5401:d077:e449:9b1f:7800:42b1",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
+    },
+    {
+      "id": "log-1788802485619-168",
+      "userId": "guest",
+      "userName": "Guest User",
+      "userEmail": "N/A",
+      "userPhone": "N/A",
+      "userRole": "guest",
+      "userCity": "Surat",
+      "action": "Website Visit / Page Click (/)",
+      "timestamp": "2026-09-07T17:34:45.619Z",
+      "date": "07 Sept 2026",
+      "time": "05:34:45 pm",
+      "ip": "2409:40c1:5401:d077:e449:9b1f:7800:42b1",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
+    },
+    {
+      "id": "log-1788802485555-712",
+      "userId": "guest",
+      "userName": "Guest User",
+      "userEmail": "N/A",
+      "userPhone": "N/A",
+      "userRole": "guest",
+      "userCity": "Surat",
+      "action": "Website Visit / Page Click (/)",
+      "timestamp": "2026-09-07T17:34:45.554Z",
+      "date": "07 Sept 2026",
+      "time": "05:34:45 pm",
+      "ip": "2409:40c1:5401:d077:e449:9b1f:7800:42b1",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
+    },
     {
       "id": "log-1788801120341-158",
       "userId": "guest",
