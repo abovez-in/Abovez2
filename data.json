@@ -1,5 +1,5 @@
 {
-  "totalWebsiteClicks": 49,
+  "totalWebsiteClicks": 51,
   "users": [
     {
       "id": "admin-1",
@@ -312,6 +312,51 @@
   ],
   "adminLogs": [],
   "loginLogs": [
+    {
+      "id": "log-1792396390024-500",
+      "userId": "guest",
+      "userName": "Guest User",
+      "userEmail": "N/A",
+      "userPhone": "N/A",
+      "userRole": "guest",
+      "userCity": "Surat",
+      "action": "New WhatsApp Order Placed: ₹430 by Test Customer",
+      "timestamp": "2026-10-19T07:53:10.000Z",
+      "date": "19 Oct 2026",
+      "time": "07:53:10 am",
+      "ip": "127.0.0.1",
+      "userAgent": "curl/7.88.1"
+    },
+    {
+      "id": "log-1792395553836-364",
+      "userId": "guest",
+      "userName": "Guest User",
+      "userEmail": "N/A",
+      "userPhone": "N/A",
+      "userRole": "guest",
+      "userCity": "Surat",
+      "action": "Website Visit / Page Click (/)",
+      "timestamp": "2026-10-19T07:39:13.835Z",
+      "date": "19 Oct 2026",
+      "time": "07:39:13 am",
+      "ip": "14.96.104.204",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+    },
+    {
+      "id": "log-1792395553824-329",
+      "userId": "guest",
+      "userName": "Guest User",
+      "userEmail": "N/A",
+      "userPhone": "N/A",
+      "userRole": "guest",
+      "userCity": "Surat",
+      "action": "Website Visit / Page Click (/)",
+      "timestamp": "2026-10-19T07:39:13.772Z",
+      "date": "19 Oct 2026",
+      "time": "07:39:13 am",
+      "ip": "14.96.104.204",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+    },
     {
       "id": "log-1788802737765-186",
       "userId": "guest",
@@ -1142,5 +1187,29 @@
   "reviews": [],
   "eventBookings": [],
   "organizers": [],
-  "organizerReviews": []
+  "organizerReviews": [],
+  "waferOrders": [
+    {
+      "id": "ord-1792396390000",
+      "createdAt": "2026-10-19T07:53:10.000Z",
+      "items": [
+        {
+          "productName": "Long Kela Wafers",
+          "quantity": 1,
+          "price": 210
+        },
+        {
+          "productName": "Round Kela Wafers",
+          "quantity": 1,
+          "price": 220
+        }
+      ],
+      "customer": {
+        "name": "Test Customer",
+        "phone": "9265993727"
+      },
+      "totalAmount": 430,
+      "status": "whatsapp_initiated"
+    }
+  ]
 }

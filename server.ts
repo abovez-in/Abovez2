@@ -39,10 +39,12 @@ interface DB {
   organizers?: any[];
   organizerReviews?: any[];
   totalWebsiteClicks?: number;
+  waferOrders?: any[];
 }
 
 const DEFAULT_DB: DB = {
   totalWebsiteClicks: 0,
+  waferOrders: [],
   posts: [],
   reviews: [],
   eventBookings: [],
@@ -517,6 +519,7 @@ function readDB(): DB {
       if (!parsed.eventBookings) parsed.eventBookings = [];
       if (!parsed.organizers) parsed.organizers = [];
       if (!parsed.organizerReviews) parsed.organizerReviews = [];
+      if (!parsed.waferOrders) parsed.waferOrders = [];
       if (!parsed.notifications || !Array.isArray(parsed.notifications)) parsed.notifications = [];
       if (!parsed.events || !Array.isArray(parsed.events)) parsed.events = [];
       if (!parsed.applications || !Array.isArray(parsed.applications)) parsed.applications = [];
@@ -725,6 +728,57 @@ Sitemap: https://abovez.in/sitemap.xml
 
     saveDB(db);
     res.json({ success: true, totalWebsiteClicks: db.totalWebsiteClicks });
+  });
+
+  // Banana Wafers Products & Pricing Endpoint
+  app.get('/api/wafer-products', (req, res) => {
+    res.json({
+      storeName: 'AboveZ Fresh Banana Wafers',
+      whatsappNumber: '9265993727',
+      displayPhone: '+91 9265993727',
+      city: 'Surat',
+      state: 'Gujarat',
+      products: [
+        {
+          id: 'long-kela-wafers',
+          name: 'Long Banana Wafers',
+          subtitle: 'Crispy Golden Long-Cut Strips',
+          pricePerKg: 210,
+          description: 'Authentic crispy long cut golden banana chips',
+          flavors: ['Rock Salt (Fasting Special)', 'Black Pepper (Mari)', 'Chatpata Masala']
+        },
+        {
+          id: 'round-kela-wafers',
+          name: 'Round Banana Wafers',
+          subtitle: 'Classic Thin-Cut Circular Chips',
+          pricePerKg: 220,
+          description: 'Crispy thin circular sliced banana chips',
+          flavors: ['Classic Rock Salt', 'Spicy Black Pepper', 'Peri-Peri Spice']
+        }
+      ]
+    });
+  });
+
+  // Track / Record WhatsApp Order Submission
+  app.post('/api/wafer-orders', (req, res) => {
+    const { items, customer, totalAmount } = req.body || {};
+    const db = readDB();
+    if (!db.waferOrders) (db as any).waferOrders = [];
+
+    const newOrder = {
+      id: 'ord-' + Date.now(),
+      createdAt: new Date().toISOString(),
+      items: items || [],
+      customer: customer || {},
+      totalAmount: totalAmount || 0,
+      status: 'whatsapp_initiated'
+    };
+
+    (db as any).waferOrders.unshift(newOrder);
+    recordUserActivityLog(db, null, `New WhatsApp Order Placed: ₹${totalAmount} by ${customer?.name || 'Customer'}`, req);
+    saveDB(db);
+
+    res.json({ success: true, orderId: newOrder.id });
   });
 
   // Get Cities
@@ -2774,7 +2828,7 @@ Sitemap: https://abovez.in/sitemap.xml
     const distPath = path.join(process.cwd(), 'dist');
     app.use(express.static(distPath));
 
-    const validPublicRoutes = ['/', '/jobs', '/hire-crew', '/find-crew', '/book-event'];
+    const validPublicRoutes = ['/', '/wafers', '/wholesale', '/long-kela-wafers', '/round-kela-wafers', '/jobs', '/hire-crew', '/find-crew', '/book-event'];
     const adminRoutes = ['/admin'];
 
     app.get('*', (req, res) => {

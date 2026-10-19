@@ -1,23 +1,13 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { WaferCartProvider } from './context/WaferCartContext';
 import { api } from './lib/api';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { MobileBottomNav } from './components/MobileBottomNav';
-import { CitySelectorModal } from './components/CitySelectorModal';
-import { SubscriptionModal } from './components/SubscriptionModal';
-import { AuthModals } from './components/AuthModals';
-import { IdUploadModal } from './components/IdUploadModal';
-
-import { HomePage } from './pages/HomePage';
-import { BookEventPage } from './pages/BookEventPage';
-import { EventsPage } from './pages/EventsPage';
-import { OrganizersPage } from './pages/OrganizersPage';
-import { CrewDashboardPage } from './pages/CrewDashboardPage';
-import { AdminPage } from './pages/AdminPage';
-import { NotFoundPage } from './pages/NotFoundPage';
-import { EditProfileModal } from './components/EditProfileModal';
+import { WaferNavbar } from './components/WaferNavbar';
+import { WaferFooter } from './components/WaferFooter';
+import { WaferCartDrawer } from './components/WaferCartDrawer';
+import { FloatingWhatsAppBtn } from './components/FloatingWhatsAppBtn';
+import { WaferStorePage } from './pages/WaferStorePage';
 import { SEOHead } from './components/SEOHead';
 
 const MainContent: React.FC = () => {
@@ -31,47 +21,29 @@ const MainContent: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-slate-50 text-slate-900 font-sans antialiased">
+    <div className="min-h-screen flex flex-col justify-between bg-white text-slate-900 font-sans antialiased selection:bg-amber-400 selection:text-amber-950">
       <SEOHead />
       <div>
-        <Header />
+        <WaferNavbar />
         <main>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/book-event" element={<BookEventPage />} />
-            <Route path="/book-event/" element={<BookEventPage />} />
-            <Route path="/find-crew" element={<CrewDashboardPage />} />
-            <Route path="/find-crew/" element={<CrewDashboardPage />} />
-            <Route path="/jobs" element={<EventsPage />} />
-            <Route path="/jobs/" element={<EventsPage />} />
-            <Route path="/hire-crew" element={<OrganizersPage />} />
-            <Route path="/hire-crew/" element={<OrganizersPage />} />
-            <Route path="/admin" element={<AdminPage />} />
-            <Route path="/admin/" element={<AdminPage />} />
-
-            {/* Client fallbacks for legacy URLs */}
-            <Route path="/events" element={<Navigate to="/jobs" replace />} />
-            <Route path="/events/" element={<Navigate to="/jobs" replace />} />
-            <Route path="/organizers" element={<Navigate to="/hire-crew" replace />} />
-            <Route path="/organizers/" element={<Navigate to="/hire-crew" replace />} />
-            <Route path="/crew-dashboard" element={<Navigate to="/find-crew" replace />} />
-            <Route path="/crew-dashboard/" element={<Navigate to="/find-crew" replace />} />
-
-            {/* True 404 page instead of redirect loop to homepage */}
-            <Route path="*" element={<NotFoundPage />} />
+            <Route path="/" element={<WaferStorePage />} />
+            <Route path="/wafers" element={<WaferStorePage />} />
+            <Route path="/long-kela-wafers" element={<WaferStorePage />} />
+            <Route path="/round-kela-wafers" element={<WaferStorePage />} />
+            <Route path="/wholesale" element={<WaferStorePage />} />
+            
+            {/* Any other routes smoothly show the store page */}
+            <Route path="*" element={<WaferStorePage />} />
           </Routes>
         </main>
       </div>
 
-      <Footer />
-      <MobileBottomNav />
-
-      {/* Global Modals */}
-      <CitySelectorModal />
-      <SubscriptionModal />
-      <AuthModals />
-      <IdUploadModal />
-      <EditProfileModal />
+      <WaferFooter />
+      
+      {/* Global Interactive Wafer Drawers & Floating WhatsApp Button */}
+      <WaferCartDrawer />
+      <FloatingWhatsAppBtn />
     </div>
   );
 };
@@ -80,7 +52,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <MainContent />
+        <WaferCartProvider>
+          <MainContent />
+        </WaferCartProvider>
       </AuthProvider>
     </BrowserRouter>
   );
