@@ -88,11 +88,11 @@ export const ReviewCrewModal: React.FC<ReviewCrewModalProps> = ({
 
   const getRatingLabel = (r: number) => {
     switch (r) {
-      case 5: return '⭐⭐⭐⭐⭐ Outstanding (5.0)';
-      case 4: return '⭐⭐⭐⭐ Very Good (4.0)';
-      case 3: return '⭐⭐⭐ Good / Satisfactory (3.0)';
-      case 2: return '⭐⭐ Needs Improvement (2.0)';
-      case 1: return '⭐ Poor (1.0)';
+      case 5: return ' Outstanding (5.0)';
+      case 4: return ' Very Good (4.0)';
+      case 3: return ' Good / Satisfactory (3.0)';
+      case 2: return ' Needs Improvement (2.0)';
+      case 1: return ' Poor (1.0)';
       default: return '';
     }
   };
@@ -199,7 +199,7 @@ export const ReviewCrewModal: React.FC<ReviewCrewModalProps> = ({
                     <span className="text-xs font-bold text-slate-700 flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5 text-blue-600" /> Punctuality:
                     </span>
-                    <span className="text-xs font-black text-blue-600">{punctualityRating}.0 ⭐</span>
+                    <span className="text-xs font-black text-blue-600">{punctualityRating}.0 </span>
                   </div>
                   <div className="flex gap-1 justify-center pt-1">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -221,7 +221,7 @@ export const ReviewCrewModal: React.FC<ReviewCrewModalProps> = ({
                     <span className="text-xs font-bold text-slate-700 flex items-center gap-1">
                       <Shirt className="w-3.5 h-3.5 text-indigo-600" /> Work & Grooming:
                     </span>
-                    <span className="text-xs font-black text-indigo-600">{workQualityRating}.0 ⭐</span>
+                    <span className="text-xs font-black text-indigo-600">{workQualityRating}.0 </span>
                   </div>
                   <div className="flex gap-1 justify-center pt-1">
                     {[1, 2, 3, 4, 5].map((star) => (

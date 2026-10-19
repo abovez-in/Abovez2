@@ -391,7 +391,7 @@ export const BookEventModal: React.FC<BookEventModalProps> = ({
                       >
                         <span className="truncate pr-2">{svc}</span>
                         {active ? (
-                          <span className="w-4 h-4 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px]">✓</span>
+                          <span className="w-4 h-4 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px]"></span>
                         ) : (
                           <span className="w-4 h-4 rounded-full border border-slate-300"></span>
                         )}

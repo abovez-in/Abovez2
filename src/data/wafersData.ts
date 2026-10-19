@@ -21,7 +21,7 @@ export const WAFER_PRODUCTS: WaferProduct[] = [
     pricePerKg: 210,
     image: 'https://images.unsplash.com/photo-1621996346565-e3d5d6281691?auto=format&fit=crop&w=800&q=80',
     description: 'Crispy, golden-yellow long cut banana wafers prepared from select raw green bananas. Sliced into long strips, deep-fried to golden perfection, and seasoned for supreme crunch.',
-    tag: 'Bestseller ⭐ ₹210/kg',
+    tag: 'Bestseller | ₹210/kg',
     flavors: [
       { id: 'rock-salt', name: 'Rock Salt (Fasting / Upvas Special)', isUpvasFriendly: true },
       { id: 'black-pepper', name: 'Black Pepper (Mari)', isUpvasFriendly: true },
@@ -49,7 +49,7 @@ export const WAFER_PRODUCTS: WaferProduct[] = [
     pricePerKg: 220,
     image: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=800&q=80',
     description: 'Traditional thin circular sliced banana chips with supreme crispiness and uniform golden hue. Perfectly seasoned and light — the ultimate tea-time snack.',
-    tag: 'Popular Favorite ⭐ ₹220/kg',
+    tag: 'Popular Favorite | ₹220/kg',
     flavors: [
       { id: 'classic-salted', name: 'Classic Rock Salt (Upvas Special)', isUpvasFriendly: true },
       { id: 'mari-pepper', name: 'Spicy Black Pepper (Mari)', isUpvasFriendly: true },
@@ -101,7 +101,7 @@ export function generateWhatsAppOrderUrl(
 
   let message = `*Hello AboveZ! I want to order Fresh Banana Wafers:*\n`;
   message += `━━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `🛒 *Order Items:*\n`;
+  message += `*Order Items:*\n`;
 
   items.forEach((item, index) => {
     message += `${index + 1}. *${item.productName}*\n`;
@@ -111,21 +111,21 @@ export function generateWhatsAppOrderUrl(
   });
 
   message += `━━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `📦 *Total Weight:* ${totalWeightKg.toFixed(2)} Kg\n`;
-  message += `💰 *Total Amount: ₹${totalAmount}*\n\n`;
+  message += `*Total Weight:* ${totalWeightKg.toFixed(2)} Kg\n`;
+  message += `*Total Amount: ₹${totalAmount}*\n\n`;
 
   if (customerInfo && customerInfo.name) {
-    message += `👤 *Customer Name:* ${customerInfo.name}\n`;
-    message += `📱 *Phone Number:* ${customerInfo.phone || DISPLAY_PHONE}\n`;
-    message += `📍 *Delivery Address:* ${customerInfo.address}\n`;
-    message += `🏙️ *City & Pincode:* ${customerInfo.city} - ${customerInfo.pincode}\n`;
+    message += `*Customer Name:* ${customerInfo.name}\n`;
+    message += `*Phone Number:* ${customerInfo.phone || DISPLAY_PHONE}\n`;
+    message += `*Delivery Address:* ${customerInfo.address}\n`;
+    message += `*City & Pincode:* ${customerInfo.city} - ${customerInfo.pincode}\n`;
     if (customerInfo.notes) {
-      message += `📝 *Notes:* ${customerInfo.notes}\n`;
+      message += `*Notes:* ${customerInfo.notes}\n`;
     }
   }
 
   message += `━━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `Please confirm my order with delivery time and payment details. Thank you! 🙏`;
+  message += `Please confirm my order with delivery time and payment details. Thank you!`;
 
   return `https://wa.me/91${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
@@ -139,10 +139,10 @@ export function generateSingleProductWhatsAppUrl(
   const total = packSize.price * qty;
   let message = `*Hello AboveZ! I want to place an order for Banana Wafers:*\n`;
   message += `━━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `🍌 *Product:* ${product.name}\n`;
-  message += `⚖️ *Pack Size:* ${packSize.label} (Quantity: ${qty})\n`;
-  message += `🌶️ *Flavor:* ${flavorName}\n`;
-  message += `💰 *Total Price:* ₹${total}\n`;
+  message += `*Product:* ${product.name}\n`;
+  message += `*Pack Size:* ${packSize.label} (Quantity: ${qty})\n`;
+  message += `*Flavor:* ${flavorName}\n`;
+  message += `*Total Price:* ₹${total}\n`;
   message += `━━━━━━━━━━━━━━━━━━━━━\n`;
   message += `Please share delivery and payment details. Thank you!`;
 
@@ -157,10 +157,10 @@ export function generateBulkInquiryWhatsAppUrl(
 ): string {
   let message = `*Hello AboveZ! I would like to inquire about Bulk / Wholesale Banana Wafers:*\n`;
   message += `━━━━━━━━━━━━━━━━━━━━━\n`;
-  message += `📦 *Product Type:* ${productType}\n`;
-  message += `⚖️ *Estimated Quantity:* ${approxQuantityKg} Kg\n`;
-  message += `🏪 *Business Type:* ${businessType}\n`;
-  message += `🏙️ *City / Location:* ${city}\n`;
+  message += `*Product Type:* ${productType}\n`;
+  message += `*Estimated Quantity:* ${approxQuantityKg} Kg\n`;
+  message += `*Business Type:* ${businessType}\n`;
+  message += `*City / Location:* ${city}\n`;
   message += `━━━━━━━━━━━━━━━━━━━━━\n`;
   message += `Please provide your best wholesale pricing and delivery schedule. Thank you!`;
 

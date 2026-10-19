@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingBag, Phone, Sparkles } from 'lucide-react';
+import { ShoppingBag, Phone, Sparkles, MessageCircle, Package } from 'lucide-react';
 import { useWaferCart } from '../context/WaferCartContext';
 import { DISPLAY_PHONE, WHATSAPP_NUMBER } from '../data/wafersData';
 
@@ -12,11 +12,11 @@ export const WaferNavbar: React.FC = () => {
       <div className="bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 text-white text-xs md:text-sm font-medium py-1.5 px-4 text-center">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
           <span className="hidden sm:inline-flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-yellow-200 animate-spin" />
+            <Sparkles className="w-3.5 h-3.5 text-yellow-200" />
             100% Fresh & Crispy Banana Wafers • Pure Rock Salt
           </span>
           <p className="mx-auto sm:mx-0 flex items-center gap-2">
-            <span>🚀 Order instantly via WhatsApp:</span>
+            <span>Order instantly via WhatsApp:</span>
             <a
               href={`https://wa.me/91${WHATSAPP_NUMBER}`}
               target="_blank"
@@ -37,7 +37,7 @@ export const WaferNavbar: React.FC = () => {
         {/* Brand Logo */}
         <a href="#home" className="flex items-center gap-3 group">
           <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
-            <span className="text-2xl" role="img" aria-label="banana">🍌</span>
+            <Package className="w-6 h-6 text-amber-950" />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
@@ -97,7 +97,7 @@ export const WaferNavbar: React.FC = () => {
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-600/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
-            <span className="text-base leading-none">💬</span>
+            <MessageCircle className="w-4 h-4 fill-white" />
             <span className="hidden xs:inline">WhatsApp</span>
             <span>Order</span>
           </a>

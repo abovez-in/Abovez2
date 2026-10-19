@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageCircle, MapPin, Mail, ShieldCheck, Heart } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Mail, ShieldCheck, Heart, Package } from 'lucide-react';
 import { DISPLAY_PHONE, WHATSAPP_NUMBER } from '../data/wafersData';
 
 export const WaferFooter: React.FC = () => {
@@ -12,8 +12,8 @@ export const WaferFooter: React.FC = () => {
           {/* Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-xl">
-                🍌
+              <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center">
+                <Package className="w-5 h-5 text-amber-950" />
               </div>
               <span className="text-2xl font-black tracking-tight font-serif text-white">
                 Above<span className="text-amber-400">Z</span> Wafers

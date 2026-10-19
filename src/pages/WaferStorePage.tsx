@@ -73,7 +73,7 @@ export const WaferStorePage: React.FC = () => {
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 rounded-3xl p-6 sm:p-8 text-amber-950 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 border-2 border-amber-300">
             <div className="space-y-2 text-center sm:text-left">
               <span className="px-3 py-1 rounded-full bg-amber-950 text-white font-black text-xs uppercase tracking-wider">
-                🌟 Super Value Combo Pack
+                Super Value Combo Pack
               </span>
               <h3 className="text-2xl font-black">
                 Long + Round Duo Pack (2 Kg Total)

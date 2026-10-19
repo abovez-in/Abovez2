@@ -11,7 +11,7 @@ export const CitySelectorModal: React.FC = () => {
 
   const zoneFilters = [
     { id: 'all', label: 'All India' },
-    { id: 'popular', label: '⭐ Top Metros' },
+    { id: 'popular', label: ' Top Metros' },
     { id: 'gujarat', label: 'Gujarat' },
     { id: 'maharashtra', label: 'Maharashtra' },
     { id: 'north', label: 'North India' },

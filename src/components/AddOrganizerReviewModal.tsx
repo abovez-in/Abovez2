@@ -219,7 +219,7 @@ export const AddOrganizerReviewModal: React.FC<AddOrganizerReviewModalProps> = (
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                     }`}
                   >
-                    {tag} {active ? '✓' : '+'}
+                    {tag} {active ? '' : '+'}
                   </button>
                 );
               })}

@@ -365,7 +365,7 @@ export const OrganizersPage: React.FC = () => {
                       </div>
 
                       <h4 className="font-bold text-slate-900 text-sm line-clamp-1">{evt.title}</h4>
-                      <p className="text-xs text-slate-500 mt-1">📍 {evt.area}, {evt.city} • 📅 {evt.eventDate}</p>
+                      <p className="text-xs text-slate-500 mt-1"> {evt.area}, {evt.city} •  {evt.eventDate}</p>
 
                       <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold">
                         <span className="text-blue-600 font-bold">₹{evt.payPerPerson}/person</span>
@@ -618,7 +618,7 @@ export const OrganizersPage: React.FC = () => {
                                       </button>
                                     )}
 
-                                    {/* Rate & Review System ⭐ */}
+                                    {/* Rate & Review System  */}
                                     <button
                                       onClick={() => {
                                         if (selectedEvent) {

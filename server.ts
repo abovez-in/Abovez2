@@ -1321,7 +1321,7 @@ Sitemap: https://abovez.in/sitemap.xml
       const notif = {
         id: 'notif-' + Date.now() + '-' + Math.random().toString(36).substr(2, 4),
         userId: crew.id,
-        title: `⚡ New ${category} Event in ${newEvent.area}!`,
+        title: ` New ${category} Event in ${newEvent.area}!`,
         message: `${newEvent.title} is hiring ${totalCrewNeeded} crew members. Pay: ₹${payPerPerson}/person. Apply now!`,
         type: 'event_alert',
         read: false,
@@ -1439,7 +1439,7 @@ Sitemap: https://abovez.in/sitemap.xml
       const notif = {
         id: 'notif-' + Date.now() + '-' + Math.random().toString(36).substr(2, 4),
         userId: app.crewId,
-        title: '⚠️ Event Removed / Cancelled',
+        title: '️ Event Removed / Cancelled',
         message: `The event "${evt.title}" on ${evt.eventDate} was removed by the organizer.`,
         type: 'event_alert',
         read: false,
@@ -1546,7 +1546,7 @@ Sitemap: https://abovez.in/sitemap.xml
     const notif = {
       id: 'notif-' + Date.now(),
       userId: evt.handlerId,
-      title: '📥 New Crew Application Received',
+      title: ' New Crew Application Received',
       message: `${crew.name} applied for "${evt.title}". Review their profile now.`,
       type: 'application_update',
       read: false,
@@ -1636,7 +1636,7 @@ Sitemap: https://abovez.in/sitemap.xml
     }
 
     // Notify Crew
-    const statusText = status === 'approved' ? '🎉 Congratulations! You have been Selected' : status === 'rejected' ? 'Application Update' : 'Event Completed';
+    const statusText = status === 'approved' ? ' Congratulations! You have been Selected' : status === 'rejected' ? 'Application Update' : 'Event Completed';
     const statusMsg = status === 'approved' 
       ? `You have been selected for "${appRecord.eventTitle}" on ${appRecord.eventDate}! Click to view event details and contact information.`
       : `Your application for "${appRecord.eventTitle}" was not selected this time. Keep applying for other nearby events!`;
@@ -1815,13 +1815,13 @@ Sitemap: https://abovez.in/sitemap.xml
 
       // Notify user
       const msg = idVerificationStatus === 'verified'
-        ? '✅ Great news! Your Identity Document has been verified. You now have a Verified Badge on your profile.'
-        : `❌ Your ID document was not approved. Reason: ${idRejectionReason || 'Document unclear or invalid'}. Please re-upload a clear photo.`;
+        ? ' Great news! Your Identity Document has been verified. You now have a Verified Badge on your profile.'
+        : ` Your ID document was not approved. Reason: ${idRejectionReason || 'Document unclear or invalid'}. Please re-upload a clear photo.`;
 
       db.notifications.unshift({
         id: 'notif-' + Date.now(),
         userId: user.id,
-        title: idVerificationStatus === 'verified' ? 'Identity Verified! ✅' : 'ID Verification Notice',
+        title: idVerificationStatus === 'verified' ? 'Identity Verified! ' : 'ID Verification Notice',
         message: msg,
         type: 'system',
         read: false,
@@ -2220,7 +2220,7 @@ Sitemap: https://abovez.in/sitemap.xml
     db.notifications.unshift({
       id: 'notif-' + Date.now(),
       userId: crewId,
-      title: isNoShow ? '⚠️ Event Attendance Status Update' : `⭐ You Received a ${rating}-Star Review!`,
+      title: isNoShow ? '️ Event Attendance Status Update' : ` You Received a ${rating}-Star Review!`,
       message: isNoShow 
         ? `${handler.name} reported a no-show for "${eventTitle}". Please ensure 100% attendance for future events.`
         : `${handler.name} reviewed your work on "${eventTitle}": "${comment || 'Excellent work!'}"`,
@@ -2230,7 +2230,7 @@ Sitemap: https://abovez.in/sitemap.xml
       eventId: eventId
     });
 
-    recordUserActivityLog(db, handler, `Submitted Rating & Review (${rating} ⭐) for crew ${crew.name}`, req);
+    recordUserActivityLog(db, handler, `Submitted Rating & Review (${rating} ) for crew ${crew.name}`, req);
     saveDB(db);
 
     res.json({ message: 'Review submitted successfully!', review: reviewData });
@@ -2559,7 +2559,7 @@ Sitemap: https://abovez.in/sitemap.xml
       const notif = {
         id: 'notif-' + Date.now(),
         userId: handler.id,
-        title: `⭐ New ${rating}-Star Client Review!`,
+        title: ` New ${rating}-Star Client Review!`,
         message: `${clientName} reviewed your event "${eventTitle}": "${comment.slice(0, 80)}..."`,
         type: 'system',
         read: false,
@@ -2569,7 +2569,7 @@ Sitemap: https://abovez.in/sitemap.xml
       try { await supabase.from('notifications').insert([notif]); } catch (e) {}
     }
 
-    recordUserActivityLog(db, { name: clientName, email: 'client' }, `Submitted Client Review for Organizer ${orgId} (${rating} ⭐)`, req);
+    recordUserActivityLog(db, { name: clientName, email: 'client' }, `Submitted Client Review for Organizer ${orgId} (${rating} )`, req);
     saveDB(db);
 
     res.json({ message: 'Review submitted successfully!', review: newReview });
@@ -2645,7 +2645,7 @@ Sitemap: https://abovez.in/sitemap.xml
       const notif = {
         id: 'notif-' + Date.now(),
         userId: orgHandler.id,
-        title: `🎉 New Event Booking Request (${bookingRef})!`,
+        title: ` New Event Booking Request (${bookingRef})!`,
         message: `${clientName} requested a booking for "${eventName}" (${category}) on ${eventDate}. Contact: ${clientPhone}`,
         type: 'application_update',
         read: false,

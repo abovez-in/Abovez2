@@ -93,8 +93,9 @@ export const WaferProductCard: React.FC<Props> = ({ product }) => {
                 1. Select Flavor:
               </label>
               {currentFlavor.isUpvasFriendly && (
-                <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                  ✓ Fasting / Upvas Friendly
+                <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 inline-flex items-center gap-1">
+                  <Check className="w-3 h-3 text-emerald-600" />
+                  <span>Fasting / Upvas Friendly</span>
                 </span>
               )}
             </div>
@@ -226,7 +227,7 @@ export const WaferProductCard: React.FC<Props> = ({ product }) => {
           className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-950 font-bold text-sm border border-amber-300 transition-all active:scale-[0.99]"
         >
           <ShoppingBag className="w-4 h-4 text-amber-800" />
-          <span>{addedToast ? '✓ Added to Cart!' : 'Add to Order List'}</span>
+          <span>{addedToast ? 'Added to Cart!' : 'Add to Order List'}</span>
         </button>
       </div>
     </div>

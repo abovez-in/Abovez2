@@ -291,7 +291,7 @@ export const OrganizerDetailModal: React.FC<OrganizerDetailModalProps> = ({
                       <div className="flex flex-wrap gap-1 pt-1">
                         {rev.praiseTags.map(tag => (
                           <span key={tag} className="text-[10px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md">
-                            ✓ {tag}
+                             {tag}
                           </span>
                         ))}
                       </div>
